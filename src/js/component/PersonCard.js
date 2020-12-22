@@ -1,6 +1,7 @@
 import React from "react";
 import swTopImage from "/workspace/react-hello-webapp/src/img/starwarsposter.jpg";
 import PropTypes from "prop-types";
+import { BigPersonCard } from "./bigPersonCard";
 
 export class PersonCard extends React.Component {
 	constructor(props) {
@@ -46,7 +47,9 @@ export class PersonCard extends React.Component {
 								</li>
 								<li> Hair Color: {this.state.personInfo.hair_color}</li>
 								<li> Eye Color: {this.state.personInfo.eye_color}</li>
-
+								<Link to={{ pathname: "/bigPersonCard/" + this.props.propUid, state: this.state }}>
+									<button className="btn btn-secondary" />
+								</Link>
 								<p className="bottomTitle align-content-bottom float-left">Databank</p>
 							</div>
 						</div>

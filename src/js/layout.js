@@ -9,6 +9,7 @@ import injectContext from "./store/appContext";
 import { PersonCard } from "./component/PersonCard";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import { BigPersonCard } from "./component/bigPersonCard";
 
 //create your first component
 const Layout = () => {
@@ -28,7 +29,7 @@ const Layout = () => {
 
 						<Route exact path="/single/:theid" component={Single} />
 
-						<Route exact path="/person/:id" component={PersonCard} />
+						<Route exact path="/person/:id" component={BigPersonCard} />
 
 						<Route>
 							<h1>Not found!</h1>
