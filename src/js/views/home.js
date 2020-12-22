@@ -8,7 +8,7 @@ export class Home extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			peopleList: {}
+			peopleList: []
 		};
 		this.url = "https://www.swapi.tech/api/people/";
 	}
@@ -20,7 +20,7 @@ export class Home extends React.Component {
 				}
 				return response.json();
 			})
-			.then(jsonifiedResponse => this.setState({ peopleList: jsonifiedResponse }))
+			.then(jsonifiedResponse => this.setState({ peopleList: jsonifiedResponse.results }))
 			.catch(function(error) {
 				console.log("Looks like there was a problem: \n", error);
 			});
@@ -33,9 +33,11 @@ export class Home extends React.Component {
 				<div>
 					<img src={logoIMG} />
 				</div>
-				<a href="#" className="btn btn-success">
-					If you see this green button, bootstrap is working
-				</a>
+				<ol>
+					{this.state.peopleList.map((person, index) => {
+						return <li key={index}>{person.name}</li>;
+					})}
+				</ol>
 			</div>
 		);
 	}
