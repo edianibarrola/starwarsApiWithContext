@@ -11,14 +11,13 @@ export class PersonCard extends React.Component {
 	render() {
 		return (
 			<div>
-				<div className="card" style={{ width: "250px" }}>
+				<div className="card" style={{ width: "400px" }}>
 					<div className="cardBG">
 						<img className="card-img-top" src={swTopImage} alt="Card image" />
 						<div className="card-body">
 							<h4 className="card-title">John Doe</h4>
-							<li> Gender: </li>
-							<li> Hair Color: </li>
-							<li> Eye Color:</li>
+                            <li> Population: </li>
+							<li> Terrain: </li>
 							<p className="bottomTitle align-content-bottom">Databank</p>
 						</div>
 					</div>
