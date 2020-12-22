@@ -29,7 +29,7 @@ const Layout = () => {
 
 						<Route exact path="/single/:theid" component={Single} />
 
-						<Route exact path="/person/:id" component={BigPersonCard} />
+						<Route exact path="/bigPersonCard/:id" component={BigPersonCard} />
 
 						<Route>
 							<h1>Not found!</h1>

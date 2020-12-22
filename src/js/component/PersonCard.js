@@ -2,6 +2,7 @@ import React from "react";
 import swTopImage from "/workspace/react-hello-webapp/src/img/starwarsposter.jpg";
 import PropTypes from "prop-types";
 import { BigPersonCard } from "./bigPersonCard";
+import { Link } from "react-router-dom";
 
 export class PersonCard extends React.Component {
 	constructor(props) {
