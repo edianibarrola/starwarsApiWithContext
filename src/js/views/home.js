@@ -3,6 +3,7 @@ import rigoImage from "/workspace/react-hello-webapp/src/img/SWbackgrounddesign.
 import "../../styles/home.scss";
 import ReactDOM from "react-dom";
 import logoIMG from "/workspace/react-hello-webapp/src/img/swLogo.png";
+import swTopImage from "/workspace/react-hello-webapp/src/img/starwarsposter.jpg";
 
 export class Home extends React.Component {
 	constructor(props) {
@@ -33,11 +34,27 @@ export class Home extends React.Component {
 				<div>
 					<img src={logoIMG} />
 				</div>
-				<ol>
+				<div className="d-flex row justify-content-around">
 					{this.state.peopleList.map((person, index) => {
-						return <li key={index}>{person.name}</li>;
+						return (
+							<div key={index}>
+								<div className="card " style={{ width: "250px" }}>
+									<div className="cardBG">
+										<img className="card-img-top" src={swTopImage} alt="Card image" />
+										<div className="card-body">
+											<h4 className="card-title">{person.name}</h4>
+											<li> Gender: </li>
+											<li> Hair Color: </li>
+											<li> Eye Color: {person.url}</li>
+
+											<p className="bottomTitle align-content-bottom float-left">Databank</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						);
 					})}
-				</ol>
+				</div>
 			</div>
 		);
 	}
