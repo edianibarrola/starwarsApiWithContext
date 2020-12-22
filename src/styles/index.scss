@@ -1,3 +1,36 @@
-/* 
+/*
     General Styles
 */
+
+.cardBG{
+    
+    background: url("../img/SWbackgrounddesign.png");
+    background-size:  100%;
+    background-repeat: no-repeat;
+    
+}
+.card{
+    color:white;
+    
+    background-color: #272727;
+    
+    
+
+}
+.card-img-top{
+    
+    max-width:auto;
+}
+.card-body{
+    border-top: 2px solid rgb(221, 117, 117);
+    padding:0px;
+    padding-left: 2%;
+    padding-right:2%;
+    padding-top:5%;
+    
+}
+.bottomTitle{
+    padding-top:2%;
+    margin-bottom:1px;
+    color: rgb(221, 117, 117);
+}

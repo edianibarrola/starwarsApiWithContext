@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
+import { PersonCard } from "./component/PersonCard";
 import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
@@ -22,24 +23,22 @@ const Layout = () => {
 				<ScrollToTop>
 					<Navbar />
 					<Switch>
-						<Route exact path="/">
-							<Home />
-						</Route>
-						<Route exact path="/demo">
-							<Demo />
-						</Route>
-						<Route exact path="/single/:theid">
-							<Single />
-						</Route>
+						<Route exact path="/" component={Home} />
+
+						<Route exact path="/demo" component={Demo} />
+
+						<Route exact path="/single/:theid" component={Single} />
+
+						<Route exact path="/person" component={PersonCard} />
+
 						<Route>
-							<h1>Not  found!</h1>
+							<h1>Not found!</h1>
 						</Route>
 					</Switch>
 					<Footer />
 				</ScrollToTop>
 			</BrowserRouter>
 		</div>
-
 	);
 };
 

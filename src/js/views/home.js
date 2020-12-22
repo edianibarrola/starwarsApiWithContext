@@ -1,5 +1,5 @@
 import React from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
+import rigoImage from "/workspace/react-hello-webapp/src/img/SWbackgrounddesign.png";
 import "../../styles/home.scss";
 
 export const Home = () => (
