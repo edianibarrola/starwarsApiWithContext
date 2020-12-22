@@ -4,6 +4,8 @@ import "../../styles/home.scss";
 import ReactDOM from "react-dom";
 import logoIMG from "/workspace/react-hello-webapp/src/img/swLogo.png";
 import swTopImage from "/workspace/react-hello-webapp/src/img/starwarsposter.jpg";
+import { PersonCard } from "../component/PersonCard";
+import PropTypes from "prop-types";
 
 export class Home extends React.Component {
 	constructor(props) {
@@ -28,7 +30,7 @@ export class Home extends React.Component {
 	}
 
 	render() {
-		console.log(this.state.peopleList);
+		console.log("PEOPLE LIST", this.state.peopleList);
 		return (
 			<div className="text-center mt-5">
 				<div>
@@ -36,23 +38,8 @@ export class Home extends React.Component {
 				</div>
 				<div className="d-flex row justify-content-around">
 					{this.state.peopleList.map((person, index) => {
-						return (
-							<div key={index}>
-								<div className="card " style={{ width: "250px" }}>
-									<div className="cardBG">
-										<img className="card-img-top" src={swTopImage} alt="Card image" />
-										<div className="card-body">
-											<h4 className="card-title">{person.name}</h4>
-											<li> Gender: </li>
-											<li> Hair Color: </li>
-											<li> Eye Color: {person.url}</li>
-
-											<p className="bottomTitle align-content-bottom float-left">Databank</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						);
+						console.log("PERSON UID", person.uid);
+						return <PersonCard key={person.uid} propUid={person.uid} />;
 					})}
 				</div>
 			</div>
