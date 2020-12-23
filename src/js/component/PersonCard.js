@@ -36,10 +36,10 @@ export class PersonCard extends React.Component {
 		return (
 			<div>
 				{this.state.personInfo ? (
-					<div className="card " style={{ width: "250px" }}>
-						<div className="cardBG">
+					<div className="card cardSmall" style={{ width: "250px" }}>
+						<div className="cardBGSmall">
 							<img className="card-img-top" src={swTopImage} alt="Card image" />
-							<div className="card-body">
+							<div className="card-body card-bodySmall">
 								<h4 className="card-title">{this.state.personInfo.name}</h4>
 								<li>
 									{" "}
@@ -51,7 +51,7 @@ export class PersonCard extends React.Component {
 								<Link to={{ pathname: "/bigPersonCard/" + this.props.propUid, state: this.state }}>
 									<button className="btn btn-secondary" />
 								</Link>
-								<p className="bottomTitle align-content-bottom float-left">Databank</p>
+								<p className="bottomTitleSmall align-content-bottom float-left">Databank</p>
 							</div>
 						</div>
 					</div>

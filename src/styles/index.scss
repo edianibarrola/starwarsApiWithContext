@@ -4,7 +4,7 @@
 body{
     background: url("../img/starfield.jpg"); 
 }
-.cardBG{
+.cardBGSmall{
     
     background: url("../img/SWbackgrounddesign.png");
     background-size:  100%;
@@ -12,7 +12,7 @@ body{
     background-position: left bottom;
     
 }
-.card{
+.cardSmall{
     color:white;
     margin:10%;
     background-color: #272727;
@@ -24,7 +24,7 @@ body{
     
     max-width:auto;
 }
-.card-body{
+.card-bodySmall{
     border-top: 2px solid rgb(221, 117, 117);
     padding:0px;
     padding-left: 4%;
@@ -32,9 +32,47 @@ body{
     padding-top:5%;
     
 }
-.bottomTitle{
+.bottomTitleSmall{
     padding-top:2%;
     margin-bottom:1px;
+    color: rgb(221, 117, 117);
+}
+.cardImgBig {
+    height:100%;
+    min-width:100%;
+    border-right: 5px solid rgb(221, 117, 117);
+}
+.cardBig{
+    color:white;
+    
+    background-color: #272727;
+    
+    
+
+}
+.card-bodyBig{
+    
+    padding:0px;
+    padding-left: 4%;
+    padding-right:4%;
+    
+    
+}
+.cardBgBig{
+    
+    background: url("../img/SWbackgrounddesign.png");
+    background-size:  100%;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    
+}
+.bottomTitleBig{
+    position: absolute;
+    bottom:0;
+    left:0;
+    padding-left:2%;
+    
+    margin-bottom:0;
     color: rgb(221, 117, 117);
 }
 .row{
