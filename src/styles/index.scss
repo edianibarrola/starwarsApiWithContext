@@ -3,8 +3,12 @@
 */
 body{
     background: url("../img/starfield.jpg"); 
+    color: white;
 }
-
+h1{
+    border-top:2px solid white;
+    border-bottom: 2px solid white;
+}
 .cardBGSmall{
     
     background: url("../img/SWbackgrounddesign.png");
