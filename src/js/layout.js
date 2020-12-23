@@ -30,7 +30,7 @@ const Layout = () => {
 
 						<Route exact path="/single/:theid" component={Single} />
 
-						<Route exact path="/BigPersonCard/:id" component={bigPersonCard} />
+						<Route exact path="/bigPersonCard/:id" component={BigPersonCard} />
 
 						<Route exact path="/BigPlanetCard/:id" component={BigPlanetCard} />
 

@@ -33,7 +33,7 @@ export class PlanetCard extends React.Component {
 	render() {
 		return (
 			<div>
-				{this.state.personInfo ? (
+				{this.state.planetInfo ? (
 					<div className="card" style={{ width: "400px" }}>
 						<div className="cardBG">
 							<img className="card-img-top" src={swTopImage} alt="Card image" />
