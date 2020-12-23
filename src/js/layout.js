@@ -37,6 +37,10 @@ const Layout = () => {
 
 						<Route>
 							<h1>Not found!</h1>
+							<img
+								className="yodaDance mx-auto"
+								src="https://media.giphy.com/media/ju6OxHdHRwLHG/giphy.gif"
+							/>
 						</Route>
 					</Switch>
 					<Footer />

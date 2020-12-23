@@ -73,12 +73,17 @@ export class PersonCard extends React.Component {
 							<div className="card-body card-bodySmall">
 								<h4 className="card-title">{this.state.personInfo.name}</h4>
 								<li>
-									{" "}
-									Gender:
+									{this.state.key5}
 									{this.state.personInfo.gender}{" "}
 								</li>
-								<li> Hair Color: {this.state.personInfo.hair_color}</li>
-								<li> Eye Color: {this.state.personInfo.eye_color}</li>
+								<li>
+									{" "}
+									{this.state.key3} {this.state.personInfo.hair_color}
+								</li>
+								<li>
+									{" "}
+									{this.state.key4} {this.state.personInfo.eye_color}
+								</li>
 								<Link to={{ pathname: "/detailsview/" + this.props.propUid, state: this.state }}>
 									<button className="btn btn-secondary float-right">More Info</button>
 								</Link>

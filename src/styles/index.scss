@@ -1,9 +1,18 @@
 /*
     General Styles
 */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 body{
+    background-color: black;
     background: url("../img/starfield.jpg"); 
     color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+.navbar{
+    background-color: #272727;
+}
+.navbar-brand{
+    color:white;
 }
 h1{
     margin-bottom:0px;
@@ -119,4 +128,8 @@ li {
     color: white;
     border-top: 5px solid grey;
     border-radius: 0px 0px 10px 10px;
+  }
+  .yodaDance{
+      width:50%;
+      height:100%;
   }
