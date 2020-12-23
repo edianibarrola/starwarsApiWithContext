@@ -57,10 +57,11 @@ export class PlanetCard extends React.Component {
 							<img className="card-img-top" src={planetImage} alt="Card image" />
 							<div className="card-body card-bodySmall">
 								<h4 className="card-title">{this.state.planetInfo.name}</h4>
-								<li> Population: </li>
-								<li> Terrain: </li>
+								<li>Gravity: {this.state.val4} </li>
+								<li> Climate: {this.state.val5} </li>
+								<li> Terrain: {this.state.val6}</li>
 								<Link to={{ pathname: "/detailsview/" + this.props.propPlanetUid, state: this.state }}>
-									<button className="btn btn-secondary" />
+									<button className="btn btn-secondary float-right">More Info</button>
 								</Link>
 								<p className="bottomTitleSmall align-content-bottom float-left">Databank</p>
 							</div>

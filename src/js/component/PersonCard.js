@@ -80,7 +80,7 @@ export class PersonCard extends React.Component {
 								<li> Hair Color: {this.state.personInfo.hair_color}</li>
 								<li> Eye Color: {this.state.personInfo.eye_color}</li>
 								<Link to={{ pathname: "/detailsview/" + this.props.propUid, state: this.state }}>
-									<button className="btn btn-secondary" />
+									<button className="btn btn-secondary float-right">More Info</button>
 								</Link>
 								<p className="bottomTitleSmall align-content-bottom float-left">Databank</p>
 							</div>

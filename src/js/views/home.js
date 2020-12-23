@@ -52,7 +52,16 @@ export class Home extends React.Component {
 				<div>
 					<img src={logoIMG} />
 				</div>
-				<h1 className="mx-auto col-8">People</h1>
+				<div className="titleWrapper mx-auto">
+					<div className="titleWrapperTop" />
+
+					<div className="titleWrapperMiddle">
+						<h1>People</h1>
+					</div>
+
+					<div className="titleWrapperBottom" />
+				</div>
+
 				<div className="d-flex row justify-content-around">
 					{this.state.peopleList.map((person, index) => {
 						console.log("PERSON UID", person.uid);
@@ -60,7 +69,16 @@ export class Home extends React.Component {
 					})}
 				</div>
 				{/* planet small card map */}
-				<h1 className="mx-auto col-8">Planets</h1>
+				<div className="titleWrapper mx-auto">
+					<div className="titleWrapperTop" />
+
+					<div className="titleWrapperMiddle">
+						<h1>Planets</h1>
+					</div>
+
+					<div className="titleWrapperBottom" />
+				</div>
+
 				<div className="d-flex row justify-content-around">
 					{this.state.planetList.map((planet, index) => {
 						console.log("PLANET UID", planet.uid);
