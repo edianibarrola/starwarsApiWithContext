@@ -43,10 +43,7 @@ export class DetailsView extends React.Component {
 							</div>
 							<div className="col-md-8 cardBgBig">
 								<div className="card-body pt-2 text-center card-bodyBig">
-									<h2 className="card-title mx-auto">
-										{key0}
-										{val0}
-									</h2>
+									<h2 className="card-title mx-auto">{val0}</h2>
 									<div className="card-text d-flex ">
 										<ul className="mx-auto col-3">
 											<li>
@@ -97,6 +94,7 @@ DetailsView.propTypes = {
 	key4: PropTypes.string,
 	key5: PropTypes.string,
 	key6: PropTypes.string,
+	val0: PropTypes.string,
 	val1: PropTypes.string,
 	val2: PropTypes.string,
 	val3: PropTypes.string,

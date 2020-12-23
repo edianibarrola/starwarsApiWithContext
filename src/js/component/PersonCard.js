@@ -47,13 +47,15 @@ export class PersonCard extends React.Component {
 					key4: "Eye Color: ",
 					key5: "Gender: ",
 					key6: "Skin Color: ",
-					val1: jsonifiedResponse.result.properties.name,
-					val2: jsonifiedResponse.result.properties.height,
+					val0: jsonifiedResponse.result.properties.name,
+					val1: jsonifiedResponse.result.properties.height,
+					val2: jsonifiedResponse.result.properties.mass,
 					val3: jsonifiedResponse.result.properties.hair_color,
 					val4: jsonifiedResponse.result.properties.eye_color,
 					val5: jsonifiedResponse.result.properties.gender,
 					val6: jsonifiedResponse.result.properties.skin_color,
-					image: "{swTopImage}"
+					image:
+						"https://b36ca17f-b693-4c92-b67d-94fa519fcf26.ws-us03.gitpod.io/files/download/?id=3f636276-b377-4a4a-9c9c-e1c8a482c6d9"
 				});
 			})
 			.catch(function(error) {
