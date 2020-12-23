@@ -54,8 +54,7 @@ export class PersonCard extends React.Component {
 					val4: jsonifiedResponse.result.properties.eye_color,
 					val5: jsonifiedResponse.result.properties.gender,
 					val6: jsonifiedResponse.result.properties.skin_color,
-					image:
-						"https://b36ca17f-b693-4c92-b67d-94fa519fcf26.ws-us03.gitpod.io/files/download/?id=3f636276-b377-4a4a-9c9c-e1c8a482c6d9"
+					image: "/starwarsposter.jpg"
 				});
 			})
 			.catch(function(error) {

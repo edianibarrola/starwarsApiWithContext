@@ -40,8 +40,7 @@ export class PlanetCard extends React.Component {
 					val4: jsonifiedResponse.result.properties.gravity,
 					val5: jsonifiedResponse.result.properties.climate,
 					val6: jsonifiedResponse.result.properties.terrain,
-					image:
-						"https://b36ca17f-b693-4c92-b67d-94fa519fcf26.ws-us03.gitpod.io/files/download/?id=091b25f0-6f39-454f-addc-52c2c7b601ec"
+					image: "/MainGalaxy.png"
 				});
 			})
 			.catch(function(error) {
