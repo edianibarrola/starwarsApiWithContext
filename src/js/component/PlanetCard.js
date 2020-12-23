@@ -1,9 +1,9 @@
 import React from "react";
-import swTopImage from "/workspace/react-hello-webapp/src/img/starwarsposter.jpg";
+import swTopImage from "/workspace/starwarsBlogWithoutContext/src/img/starwarsposter.jpg";
 import PropTypes from "prop-types";
-import { BigPlanetCard } from "./BigPlanetCard";
+
 import { Link } from "react-router-dom";
-import planetImage from "/workspace/react-hello-webapp/src/img/MainGalaxy.png";
+import planetImage from "/workspace/starwarsBlogWithoutContext/src/img/MainGalaxy.png";
 
 export class PlanetCard extends React.Component {
 	constructor(props) {

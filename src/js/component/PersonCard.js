@@ -1,8 +1,9 @@
 import React from "react";
-import swTopImage from "/workspace/react-hello-webapp/src/img/starwarsposter.jpg";
+import swTopImage from "/workspace/starwarsBlogWithoutContext/src/img/starwarsposter.jpg";
 import PropTypes from "prop-types";
-import { BigPersonCard } from "./bigPersonCard";
+
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 export class PersonCard extends React.Component {
 	constructor(props) {
@@ -87,6 +88,18 @@ export class PersonCard extends React.Component {
 								<Link to={{ pathname: "/detailsview/" + this.props.propUid, state: this.state }}>
 									<button className="btn btn-secondary float-right">More Info</button>
 								</Link>
+								<Context.Consumer>
+									{(
+										{ store, actions } //Object deconstruction for faster coding
+									) => (
+										<button
+											onClick={() => actions.addToFavorites(this.state.val0)}
+											className="btn btn-secondary float-right">
+											heart
+										</button>
+									)}
+								</Context.Consumer>
+
 								<p className="bottomTitleSmall align-content-bottom float-left">Databank</p>
 							</div>
 						</div>

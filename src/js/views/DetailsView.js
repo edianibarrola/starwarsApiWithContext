@@ -1,10 +1,10 @@
 import React from "react";
-import swTopImage from "/workspace/react-hello-webapp/src/img/starwarsposter.jpg";
+import swTopImage from "/workspace/starwarsBlogWithoutContext/src/img/starwarsposter.jpg";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import swSideImage from "/workspace/react-hello-webapp/src/img/starwarsHorizontal.jpg";
-import logoIMG from "/workspace/react-hello-webapp/src/img/swLogo.png";
-import planetImage from "/workspace/react-hello-webapp/src/img/MainGalaxy.png";
+import swSideImage from "/workspace/starwarsBlogWithoutContext/src/img/starwarsHorizontal.jpg";
+import logoIMG from "/workspace/starwarsBlogWithoutContext/src/img/swLogo.png";
+import planetImage from "/workspace/starwarsBlogWithoutContext/src/img/MainGalaxy.png";
 
 export class DetailsView extends React.Component {
 	constructor() {

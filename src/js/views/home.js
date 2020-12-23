@@ -1,9 +1,9 @@
 import React from "react";
-import rigoImage from "/workspace/react-hello-webapp/src/img/SWbackgrounddesign.png";
+import rigoImage from "/workspace/starwarsBlogWithoutContext/src/img/SWbackgrounddesign.png";
 import "../../styles/home.scss";
 import ReactDOM from "react-dom";
-import logoIMG from "/workspace/react-hello-webapp/src/img/swLogo.png";
-import swTopImage from "/workspace/react-hello-webapp/src/img/starwarsposter.jpg";
+import logoIMG from "/workspace/starwarsBlogWithoutContext/src/img/swLogo.png";
+import swTopImage from "/workspace/starwarsBlogWithoutContext/src/img/starwarsposter.jpg";
 import { PersonCard } from "../component/PersonCard";
 import PropTypes from "prop-types";
 import { PlanetCard } from "../component/PlanetCard";

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logoIMG from "/workspace/react-hello-webapp/src/img/swLogo.png";
+import logoIMG from "/workspace/starwarsBlogWithoutContext/src/img/swLogo.png";
 
 export const Navbar = () => {
 	return (

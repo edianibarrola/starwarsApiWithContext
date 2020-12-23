@@ -9,8 +9,8 @@ import injectContext from "./store/appContext";
 import { PersonCard } from "./component/PersonCard";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
-import { BigPersonCard } from "./component/bigPersonCard";
-import { BigPlanetCard } from "./component/BigPlanetCard";
+// import { BigPersonCard } from "./component/bigPersonCard";
+// import { BigPlanetCard } from "./component/BigPlanetCard";
 import { DetailsView } from "./views/DetailsView";
 
 //create your first component
@@ -32,8 +32,6 @@ const Layout = () => {
 						<Route exact path="/single/:theid" component={Single} />
 
 						<Route exact path="/detailsview/:id" component={DetailsView} />
-
-						<Route exact path="/BigPlanetCard/:id" component={BigPlanetCard} />
 
 						<Route>
 							<h1>Not found!</h1>
