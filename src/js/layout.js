@@ -10,6 +10,7 @@ import { PersonCard } from "./component/PersonCard";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { BigPersonCard } from "./component/bigPersonCard";
+import { BigPlanetCard } from "./component/BigPlanetCard";
 
 //create your first component
 const Layout = () => {
@@ -29,7 +30,9 @@ const Layout = () => {
 
 						<Route exact path="/single/:theid" component={Single} />
 
-						<Route exact path="/bigPersonCard/:id" component={BigPersonCard} />
+						<Route exact path="/BigPersonCard/:id" component={bigPersonCard} />
+
+						<Route exact path="/BigPlanetCard/:id" component={BigPlanetCard} />
 
 						<Route>
 							<h1>Not found!</h1>
