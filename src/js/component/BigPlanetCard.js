@@ -29,13 +29,17 @@ export class BigPlanetCard extends React.Component {
 									<h2 className="card-title mx-auto">{planet.name}</h2>
 									<div className="card-text d-flex ">
 										<ul className="mx-auto col-3">
-											<li>Height: </li>
-											<li>Mass (on Earth): </li>
-											<li>Hair Color: </li>
-											<li>Skin Color: </li>
+											<li>Diameter: </li>
+											<li>Rotation Period: {planet.rotation_period} </li>
+											<li>Orbital Period: {planet.orbital_period}</li>
+											<li>Gravity: {planet.gravity}</li>
+											<li>Population: {planet.population}</li>
+											<li>Climate: {planet.climate}</li>
+											<li>Terrain: {planet.terrain}</li>
+											<li>Surface Water: {planet.surface_water}% </li>
 										</ul>
 
-										<p className="text-left px-2">
+										<p className="text-left pt-4 px-2">
 											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 											tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 											quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
