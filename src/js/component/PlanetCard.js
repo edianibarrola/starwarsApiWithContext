@@ -3,6 +3,7 @@ import swTopImage from "/workspace/react-hello-webapp/src/img/starwarsposter.jpg
 import PropTypes from "prop-types";
 import { BigPlanetCard } from "./BigPlanetCard";
 import { Link } from "react-router-dom";
+import planetImage from "/workspace/react-hello-webapp/src/img/MainGalaxy.png";
 
 export class PlanetCard extends React.Component {
 	constructor(props) {
@@ -34,18 +35,18 @@ export class PlanetCard extends React.Component {
 		return (
 			<div>
 				{this.state.planetInfo ? (
-					<div className="card" style={{ width: "400px" }}>
-						<div className="cardBG">
-							<img className="card-img-top" src={swTopImage} alt="Card image" />
-							<div className="card-body">
-								<h4 className="card-title">John Doe</h4>
+					<div className="card cardSmall" style={{ width: "250px" }}>
+						<div className="cardBGSmall">
+							<img className="card-img-top" src={planetImage} alt="Card image" />
+							<div className="card-body card-bodySmall">
+								<h4 className="card-title">{this.state.planetInfo.name}</h4>
 								<li> Population: </li>
 								<li> Terrain: </li>
 								<Link
 									to={{ pathname: "/BigPlanetCard/" + this.props.propPlanetUid, state: this.state }}>
 									<button className="btn btn-secondary" />
 								</Link>
-								<p className="bottomTitle align-content-bottom">Databank</p>
+								<p className="bottomTitleSmall align-content-bottom float-left">Databank</p>
 							</div>
 						</div>
 					</div>
