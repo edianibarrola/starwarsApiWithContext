@@ -11,6 +11,7 @@ import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { BigPersonCard } from "./component/bigPersonCard";
 import { BigPlanetCard } from "./component/BigPlanetCard";
+import { DetailsView } from "./views/DetailsView";
 
 //create your first component
 const Layout = () => {
@@ -30,7 +31,7 @@ const Layout = () => {
 
 						<Route exact path="/single/:theid" component={Single} />
 
-						<Route exact path="/bigPersonCard/:id" component={BigPersonCard} />
+						<Route exact path="/detailsview/:id" component={DetailsView} />
 
 						<Route exact path="/BigPlanetCard/:id" component={BigPlanetCard} />
 

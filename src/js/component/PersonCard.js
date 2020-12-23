@@ -9,7 +9,21 @@ export class PersonCard extends React.Component {
 		super(props);
 
 		this.state = {
-			personInfo: null
+			personInfo: null,
+			key0: null,
+			key1: null,
+			key2: null,
+			key3: null,
+			key4: null,
+			key5: null,
+			key6: null,
+			val1: null,
+			val2: null,
+			val3: null,
+			val4: null,
+			val5: null,
+			val6: null,
+			image: null
 		};
 		this.personUrl = "https://www.swapi.tech/api/people/";
 	}
@@ -24,7 +38,23 @@ export class PersonCard extends React.Component {
 			})
 			.then(jsonifiedResponse => {
 				console.log("RESULT", jsonifiedResponse.result.properties);
-				this.setState({ personInfo: jsonifiedResponse.result.properties });
+				this.setState({
+					personInfo: jsonifiedResponse.result.properties,
+					key0: "Name: ",
+					key1: "Height: ",
+					key2: "Mass: ",
+					key3: "Hair Color: ",
+					key4: "Eye Color: ",
+					key5: "Gender: ",
+					key6: "Skin Color: ",
+					val1: jsonifiedResponse.result.properties.name,
+					val2: jsonifiedResponse.result.properties.height,
+					val3: jsonifiedResponse.result.properties.hair_color,
+					val4: jsonifiedResponse.result.properties.eye_color,
+					val5: jsonifiedResponse.result.properties.gender,
+					val6: jsonifiedResponse.result.properties.skin_color,
+					image: "{swTopImage}"
+				});
 			})
 			.catch(function(error) {
 				console.log("Looks like there was a problem: \n", error);
@@ -48,7 +78,7 @@ export class PersonCard extends React.Component {
 								</li>
 								<li> Hair Color: {this.state.personInfo.hair_color}</li>
 								<li> Eye Color: {this.state.personInfo.eye_color}</li>
-								<Link to={{ pathname: "/bigPersonCard/" + this.props.propUid, state: this.state }}>
+								<Link to={{ pathname: "/detailsview/" + this.props.propUid, state: this.state }}>
 									<button className="btn btn-secondary" />
 								</Link>
 								<p className="bottomTitleSmall align-content-bottom float-left">Databank</p>
