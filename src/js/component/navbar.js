@@ -6,7 +6,7 @@ import { Button, Navbar, Nav, NavItem, NavDropdown, MenuItem } from "react-boots
 
 export const NavbarDisplay = () => {
 	return (
-		<Nav className="navbar navbar-dark  mb-3 justify-content-between">
+		<Nav className="navbar navbar-dark mb-3 justify-content-between">
 			<Link to="/">
 				<span className="navbar-brand mb-0 h1">Home</span>
 			</Link>
@@ -19,7 +19,7 @@ export const NavbarDisplay = () => {
 					{(
 						{ store, actions } //Object deconstruction for faster coding
 					) => (
-						<Navbar bg="light" expand="lg">
+						<Navbar bg="dark" expand="lg">
 							<Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
 							<Navbar.Toggle aria-controls="basic-navbar-nav" />
 							<Navbar.Collapse id="basic-navbar-nav">
@@ -30,7 +30,7 @@ export const NavbarDisplay = () => {
 										{store.favorites.map((fav, index) => {
 											return (
 												<NavDropdown.Item key={index} href="">
-													{fav}
+													{fav.favorite}
 												</NavDropdown.Item>
 											);
 										})}
