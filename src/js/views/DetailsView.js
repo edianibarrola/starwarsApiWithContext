@@ -22,6 +22,7 @@ export class DetailsView extends React.Component {
 			key4,
 			key5,
 			key6,
+			key7,
 			val0,
 			val1,
 			val2,
@@ -29,6 +30,7 @@ export class DetailsView extends React.Component {
 			val4,
 			val5,
 			val6,
+			val7,
 			image
 		} = this.props.location.state;
 		let planet = this.props.location.state.planetInfo ? this.props.location.state.planetInfo : null;
@@ -94,6 +96,7 @@ DetailsView.propTypes = {
 	key4: PropTypes.string,
 	key5: PropTypes.string,
 	key6: PropTypes.string,
+	key7: PropTypes.string,
 	val0: PropTypes.string,
 	val1: PropTypes.string,
 	val2: PropTypes.string,
@@ -101,5 +104,6 @@ DetailsView.propTypes = {
 	val4: PropTypes.string,
 	val5: PropTypes.string,
 	val6: PropTypes.string,
+	val7: PropTypes.string,
 	image: PropTypes.string
 };

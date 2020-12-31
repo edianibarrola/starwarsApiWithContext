@@ -16,9 +16,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 			favorites: []
 		},
 		actions: {
-			addToFavorites: (uid, favorite, url) => {
+			addToFavorites: (uid, favorite, url, humanOrPlanet) => {
 				const store = getStore();
-				const newFavorites = store.favorites.concat({ uid: uid, favorite: favorite, url: url });
+				const newFavorites = store.favorites.concat({
+					uid: uid,
+					favorite: favorite,
+					url: url,
+					humanOrPlanet: humanOrPlanet
+				});
 				setStore({
 					favorites: newFavorites
 				});

@@ -48,6 +48,7 @@ export class PersonCard extends React.Component {
 					key4: "Eye Color: ",
 					key5: "Gender: ",
 					key6: "Skin Color: ",
+					key7: "humanOrPlanet: ",
 					val0: jsonifiedResponse.result.properties.name,
 					val1: jsonifiedResponse.result.properties.height,
 					val2: jsonifiedResponse.result.properties.mass,
@@ -55,6 +56,7 @@ export class PersonCard extends React.Component {
 					val4: jsonifiedResponse.result.properties.eye_color,
 					val5: jsonifiedResponse.result.properties.gender,
 					val6: jsonifiedResponse.result.properties.url,
+					val7: "human",
 					image: "/starwarsposter.jpg"
 				});
 			})
@@ -97,7 +99,9 @@ export class PersonCard extends React.Component {
 												actions.addToFavorites(
 													this.props.propUid,
 													this.state.val0,
-													this.state.val6
+													this.state.val6,
+													this.state.val7,
+													this.state.image
 												)
 											}
 											className="btn btn-secondary float-right">

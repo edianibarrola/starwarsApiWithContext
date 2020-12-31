@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 
 import { Link } from "react-router-dom";
 import planetImage from "/workspace/starwarsBlogWithoutContext/src/img/MainGalaxy.png";
+import { Context } from "../store/appContext";
 
 export class PlanetCard extends React.Component {
 	constructor(props) {
@@ -33,6 +34,7 @@ export class PlanetCard extends React.Component {
 					key4: "Gravity: ",
 					key5: "Climate: ",
 					key6: "Terrain: ",
+					key7: "planetOrHuman: ",
 					val0: jsonifiedResponse.result.properties.name,
 					val1: jsonifiedResponse.result.properties.diameter,
 					val2: jsonifiedResponse.result.properties.orbital_period,
@@ -40,6 +42,7 @@ export class PlanetCard extends React.Component {
 					val4: jsonifiedResponse.result.properties.gravity,
 					val5: jsonifiedResponse.result.properties.climate,
 					val6: jsonifiedResponse.result.properties.terrain,
+					val7: "planet",
 					image: "/MainGalaxy.png"
 				});
 			})
@@ -63,6 +66,25 @@ export class PlanetCard extends React.Component {
 								<Link to={{ pathname: "/detailsview/" + this.props.propPlanetUid, state: this.state }}>
 									<button className="btn btn-secondary float-right">More Info</button>
 								</Link>
+								<Context.Consumer>
+									{(
+										{ store, actions } //Object deconstruction for faster coding
+									) => (
+										<button
+											onClick={() =>
+												actions.addToFavorites(
+													this.state.val6,
+													this.state.val0,
+													this.state.val7,
+													this.state.image
+												)
+											}
+											className="btn btn-secondary float-right">
+											heart
+										</button>
+									)}
+								</Context.Consumer>
+
 								<p className="bottomTitleSmall align-content-bottom float-left">Databank</p>
 							</div>
 						</div>
