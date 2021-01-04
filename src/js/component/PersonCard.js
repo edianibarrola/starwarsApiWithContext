@@ -47,7 +47,7 @@ export class PersonCard extends React.Component {
 					key3: "Hair Color: ",
 					key4: "Eye Color: ",
 					key5: "Gender: ",
-					key6: "Skin Color: ",
+					key6: "UID: ",
 					key7: "humanOrPlanet: ",
 					val0: jsonifiedResponse.result.properties.name,
 					val1: jsonifiedResponse.result.properties.height,
@@ -55,7 +55,7 @@ export class PersonCard extends React.Component {
 					val3: jsonifiedResponse.result.properties.hair_color,
 					val4: jsonifiedResponse.result.properties.eye_color,
 					val5: jsonifiedResponse.result.properties.gender,
-					val6: jsonifiedResponse.result.properties.url,
+					val6: jsonifiedResponse.result.properties.uid,
 					val7: "human",
 					image: "/starwarsposter.jpg"
 				});
@@ -87,7 +87,11 @@ export class PersonCard extends React.Component {
 									{" "}
 									{this.state.key4} {this.state.personInfo.eye_color}
 								</li>
-								<Link to={{ pathname: "/detailsview/" + this.props.propUid, state: this.state }}>
+								<Link
+									to={{
+										pathname: "/detailsview/" + this.props.propUid,
+										state: this.state
+									}}>
 									<button className="btn btn-secondary float-right">More Info</button>
 								</Link>
 								<Context.Consumer>
@@ -98,10 +102,12 @@ export class PersonCard extends React.Component {
 											onClick={() =>
 												actions.addToFavorites(
 													this.props.propUid,
-													this.state.val0,
-													this.state.val6,
-													this.state.val7,
-													this.state.image
+													this.state
+
+													// this.state.val0,
+													// this.state.val6,
+													// this.state.val7,
+													// this.state.image
 												)
 											}
 											className="btn btn-secondary float-right">

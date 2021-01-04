@@ -33,7 +33,7 @@ export class PlanetCard extends React.Component {
 					key3: "Rotation Period: ",
 					key4: "Gravity: ",
 					key5: "Climate: ",
-					key6: "Terrain: ",
+					key6: "UID: ",
 					key7: "planetOrHuman: ",
 					val0: jsonifiedResponse.result.properties.name,
 					val1: jsonifiedResponse.result.properties.diameter,
@@ -63,7 +63,11 @@ export class PlanetCard extends React.Component {
 								<li>Gravity: {this.state.val4} </li>
 								<li> Climate: {this.state.val5} </li>
 								<li> Terrain: {this.state.val6}</li>
-								<Link to={{ pathname: "/detailsview/" + this.props.propPlanetUid, state: this.state }}>
+								<Link
+									to={{
+										pathname: "/detailsview/" + this.props.propPlanetUid,
+										state: this.state
+									}}>
 									<button className="btn btn-secondary float-right">More Info</button>
 								</Link>
 								<Context.Consumer>
@@ -71,15 +75,7 @@ export class PlanetCard extends React.Component {
 										{ store, actions } //Object deconstruction for faster coding
 									) => (
 										<button
-											onClick={() =>
-												actions.addToFavorites(
-													this.props.propPlanetUid,
-													this.state.val0,
-													this.state.val6,
-													this.state.val7,
-													this.state.image
-												)
-											}
+											onClick={() => actions.addToFavorites(this.props.propPlanetUid, this.state)}
 											className="btn btn-secondary float-right">
 											heart
 										</button>

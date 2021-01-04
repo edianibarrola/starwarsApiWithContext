@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logoIMG from "/workspace/starwarsBlogWithoutContext/src/img/swLogo.png";
 import { Context } from "../store/appContext";
-import { Button, Navbar, Nav, NavItem, NavDropdown, MenuItem } from "react-bootstrap";
+import { Button, Navbar, Nav, NavItem, NavDropdown, MenuItem, Badge } from "react-bootstrap";
 
 export const NavbarDisplay = () => {
 	return (
@@ -20,23 +20,26 @@ export const NavbarDisplay = () => {
 						{ store, actions } //Object deconstruction for faster coding
 					) => (
 						<Navbar bg="dark" expand="lg">
-							<Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
 							<Navbar.Toggle aria-controls="basic-navbar-nav" />
 							<Navbar.Collapse id="basic-navbar-nav">
 								<Nav className="mr-auto">
 									{/* <Nav.Link href="#home">Home</Nav.Link>
 									<Nav.Link href="#link">Link</Nav.Link> */}
-									<NavDropdown title="Dropdown" id="basic-nav-dropdown">
+
+									<NavDropdown title="Favorites" id="basic-nav-dropdown">
 										{store.favorites.map((fav, index) => {
 											return (
 												<li key={index}>
 													<NavDropdown.Item key={index} href="">
-														<Link
-															to={{
-																pathname: "/detailsview/" + fav.uid
-															}}>
-															{fav.favorite}
-														</Link>
+														<span>
+															<Link
+																to={{
+																	pathname: "/detailsview/" + fav.uid,
+																	state: fav.details
+																}}>
+																{fav.details.val0}
+															</Link>
+														</span>
 														<button
 															className="btn btn-secondary float-right"
 															onClick={() => actions.removeListItem(index)}>
@@ -47,6 +50,7 @@ export const NavbarDisplay = () => {
 											);
 										})}
 									</NavDropdown>
+									<Badge variant="secondary">{store.favorites.length}</Badge>
 								</Nav>
 							</Navbar.Collapse>
 						</Navbar>
