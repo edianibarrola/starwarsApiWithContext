@@ -30,7 +30,13 @@ export const NavbarDisplay = () => {
 										{store.favorites.map((fav, index) => {
 											return (
 												<NavDropdown.Item key={index} href="">
-													{fav.favorite}
+													{fav.favorite}{" "}
+													<i
+														className="fas float-right fa-ban"
+														// onClick={() =>
+														// 	this.removeListItem(index)
+														// ?
+													/>
 												</NavDropdown.Item>
 											);
 										})}

@@ -1,18 +1,10 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			],
+			peopleList: [],
+
+			planetList: [],
+
 			favorites: []
 		},
 		actions: {
@@ -33,7 +25,31 @@ const getState = ({ getStore, getActions, setStore }) => {
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
 			},
-			loadSomeData: () => {
+			loadInitialData: () => {
+				fetch("https://www.swapi.tech/api/people/")
+					.then(function(response) {
+						if (!response.ok) {
+							throw Error(response.statusText);
+						}
+						return response.json();
+					})
+					.then(jsonifiedResponse => setStore({ peopleList: jsonifiedResponse.results }))
+					.catch(function(error) {
+						console.log("Looks like there was a problem: \n", error);
+					});
+
+				//2nd fetch for planet list
+				fetch("https://www.swapi.tech/api/planets/")
+					.then(function(response) {
+						if (!response.ok) {
+							throw Error(response.statusText);
+						}
+						return response.json();
+					})
+					.then(jsonifiedResponse => setStore({ planetList: jsonifiedResponse.results }))
+					.catch(function(error) {
+						console.log("Looks like there was a problem: \n", error);
+					});
 				/**
 					fetch().then().then(data => setStore({ "foo": data.bar }))
 				*/
