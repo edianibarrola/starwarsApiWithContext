@@ -22,7 +22,7 @@ export const NavbarDisplay = () => {
 						<Navbar bg="dark" expand="lg">
 							<Navbar.Toggle aria-controls="basic-navbar-nav" />
 							<Navbar.Collapse id="basic-navbar-nav">
-								<Nav className="mr-auto">
+								<Nav className="mx-auto d-flex d-inline-block">
 									{/* <Nav.Link href="#home">Home</Nav.Link>
 									<Nav.Link href="#link">Link</Nav.Link> */}
 
@@ -50,7 +50,10 @@ export const NavbarDisplay = () => {
 											);
 										})}
 									</NavDropdown>
-									<Badge variant="secondary">{store.favorites.length}</Badge>
+
+									<Badge className="my-auto" variant="secondary">
+										{store.favorites.length}
+									</Badge>
 								</Nav>
 							</Navbar.Collapse>
 						</Navbar>

@@ -64,7 +64,7 @@ export class Home extends React.Component {
 							<div className="titleWrapperBottom" />
 						</div>
 
-						<div className="d-flex row justify-content-around">
+						<div className="d-flex flex-nowrap scrollWrapper row mx-5">
 							{store.peopleList.map((person, index) => {
 								console.log("PERSON UID", person.uid);
 								return <PersonCard key={person.uid} propUid={person.uid} />;
@@ -81,7 +81,7 @@ export class Home extends React.Component {
 							<div className="titleWrapperBottom" />
 						</div>
 
-						<div className="d-flex row justify-content-around">
+						<div className="d-flex scrollWrapper row mx-5">
 							{store.planetList.map((planet, index) => {
 								console.log("PLANET UID", planet.uid);
 								return <PlanetCard key={planet.uid} propPlanetUid={planet.uid} />;

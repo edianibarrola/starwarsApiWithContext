@@ -55,7 +55,7 @@ export class PlanetCard extends React.Component {
 		return (
 			<div>
 				{this.state.planetInfo ? (
-					<div className="card cardSmall" style={{ width: "250px" }}>
+					<div className="card cardSmall mx-2" style={{ width: "250px" }}>
 						<div className="cardBGSmall">
 							<img className="card-img-top" src={planetImage} alt="Card image" />
 							<div className="card-body card-bodySmall">

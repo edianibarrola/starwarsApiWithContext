@@ -70,7 +70,7 @@ export class PersonCard extends React.Component {
 		return (
 			<div>
 				{this.state.personInfo ? (
-					<div className="card cardSmall" style={{ width: "250px" }}>
+					<div className="card cardSmall mx-2" style={{ width: "250px" }}>
 						<div className="cardBGSmall">
 							<img className="card-img-top" src={swTopImage} alt="Card image" />
 							<div className="card-body card-bodySmall">

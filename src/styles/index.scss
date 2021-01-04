@@ -133,3 +133,11 @@ li {
       width:50%;
       height:100%;
   }
+.scrollWrapper {
+    display: flex;
+  flex-wrap: nowrap;
+    overflow-x: auto;
+}
+.card{
+    flex: 0 0 auto;
+}
