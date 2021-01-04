@@ -67,6 +67,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
+			},
+			removeListItem: id => {
+				const store = getStore();
+
+				const newFavorites = store.favorites.filter((input, index) => index != id);
+				setStore({ favorites: newFavorites });
 			}
 		}
 	};

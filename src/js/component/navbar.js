@@ -29,15 +29,15 @@ export const NavbarDisplay = () => {
 									<NavDropdown title="Dropdown" id="basic-nav-dropdown">
 										{store.favorites.map((fav, index) => {
 											return (
-												<NavDropdown.Item key={index} href="">
-													{fav.favorite}{" "}
-													<i
-														className="fas float-right fa-ban"
-														// onClick={() =>
-														// 	this.removeListItem(index)
-														// ?
-													/>
-												</NavDropdown.Item>
+												<li key={index}>
+													<NavDropdown.Item key={index} href="">
+														{fav.favorite}{" "}
+														<i
+															className="fas float-right fa-ban"
+															onClick={() => actions.removeListItem(index)}
+														/>
+													</NavDropdown.Item>
+												</li>
 											);
 										})}
 									</NavDropdown>
