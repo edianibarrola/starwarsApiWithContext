@@ -41,7 +41,7 @@ export class PlanetCard extends React.Component {
 					val3: jsonifiedResponse.result.properties.rotation_period,
 					val4: jsonifiedResponse.result.properties.gravity,
 					val5: jsonifiedResponse.result.properties.climate,
-					val6: jsonifiedResponse.result.properties.terrain,
+					val6: jsonifiedResponse.result.properties.uid,
 					val7: "planet",
 					image: "/MainGalaxy.png"
 				});
@@ -73,8 +73,9 @@ export class PlanetCard extends React.Component {
 										<button
 											onClick={() =>
 												actions.addToFavorites(
-													this.state.val6,
+													this.props.propPlanetUid,
 													this.state.val0,
+													this.state.val6,
 													this.state.val7,
 													this.state.image
 												)

@@ -24,18 +24,24 @@ export const NavbarDisplay = () => {
 							<Navbar.Toggle aria-controls="basic-navbar-nav" />
 							<Navbar.Collapse id="basic-navbar-nav">
 								<Nav className="mr-auto">
-									<Nav.Link href="#home">Home</Nav.Link>
-									<Nav.Link href="#link">Link</Nav.Link>
+									{/* <Nav.Link href="#home">Home</Nav.Link>
+									<Nav.Link href="#link">Link</Nav.Link> */}
 									<NavDropdown title="Dropdown" id="basic-nav-dropdown">
 										{store.favorites.map((fav, index) => {
 											return (
 												<li key={index}>
 													<NavDropdown.Item key={index} href="">
-														{fav.favorite}{" "}
-														<i
-															className="fas float-right fa-ban"
-															onClick={() => actions.removeListItem(index)}
-														/>
+														<Link
+															to={{
+																pathname: "/detailsview/" + fav.uid
+															}}>
+															{fav.favorite}
+														</Link>
+														<button
+															className="btn btn-secondary float-right"
+															onClick={() => actions.removeListItem(index)}>
+															<i className="fas float-right fa-ban" />
+														</button>
 													</NavDropdown.Item>
 												</li>
 											);
